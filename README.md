@@ -10,6 +10,7 @@
 * The model is pickled and used using an API developed using flask.
 * Postgresql is used to store patients information
 
+## The model has an accuracy of 97% and the Details of the training is provided in the ML model.pdf in root directory
 ### Steps of execution of the project
 1. Start of the application
 2. Input values such as age, chest pain type, resting blood pressure, fasting blood sugar, maximum heart rate achieved, etc.
