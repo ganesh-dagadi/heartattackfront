@@ -5,7 +5,10 @@
 * It is difficult to identify heart disease because of several contributory risk factors such as diabetes, high blood pressure, high cholestrol, abnormal pulse rate and many other factors.
 * The severity of the heart disease is classified on the Random Forest Classifier.
 * The main objective of this web application is to develop a heart prediction system can discover diseases from the heart data set.
-* This application aims to exploit machine learning techniques on the medical data set to assist in the prediction of the heart disease.
+* This application aims to implement machine learning techniques on the medical data set to assist in the prediction of the heart disease.
+* Backend code respository [link](https://github.com/ganesh-dagadi/hearattackbackend)
+* The model is pickled and used using an API developed using flask.
+* Postgresql is used to store patients information
 
 ### Steps of execution of the project
 1. Start of the application
@@ -14,4 +17,17 @@
 4. close the application.
 
 ### Screenshots
+
+DashBoard
+![Dashboard](/Screenshots/Screenshot%20(3).png)
+
+Add Patients
+
+![Add patients](/Screenshots/Screenshot%20(4).png)
+![Add patients](/Screenshots/Screenshot%20(5).png)
+![Add patients](/Screenshots/Screenshot%20(6).png)
+
+View Patients
+![View patients](/Screenshots/Screenshot%20(7).png)
+![View patients](/Screenshots/Screenshot%20(8).png)
 
