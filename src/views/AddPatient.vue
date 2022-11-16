@@ -130,6 +130,8 @@
 </template>
 
 <script>
+import router from '@/router'
+import axios from 'axios'
 export default{
     name : "addPatient",
     data(){
@@ -154,8 +156,9 @@ export default{
         }
     },
     methods : {
-        handleAddPatient: function (){
-            console.log(this.patientData)
+        handleAddPatient: async function (){
+            await axios.post('http://localhost:5000/patient' , this.patientData)
+            router.push('/')
     }}
 }
 </script>

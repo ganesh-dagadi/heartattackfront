@@ -53,6 +53,7 @@ import { mapGetters } from 'vuex';
     mounted : function(){
       const data = this.getPatientData;
       this.PatientsData = data
+      console.log(this.PatientsData)
     },
     data(){
       return{
@@ -64,7 +65,7 @@ import { mapGetters } from 'vuex';
 
 <style>
   .card-body{
-    text-align: left;
+    text-align: center;
   }
 
   .card{

@@ -16,42 +16,26 @@
   </div>
 </nav>
 <div class="container" style="padding-top: 20px;">
-  <router-view/>
+  <router-view v-if="mounted"></router-view>
 </div>
 </template>
 
 <script>
+import axios from 'axios'
   export default{
-    mounted:function(){
-      //get data from backend
-      const data = [{
-        name:"Ganesh",
-        age : 45,
-        sex: 'M', //convert to 0 or 1
-        chestPain : 2,
-        id : 1,
-        inRisk : true
-      },
-      {
-        name:"Ganesh",
-        age : 45,
-        sex: 'M', //convert to 0 or 1
-        chestPain : 2,
-        id : 2,
-        inRisk : false
-      },
-      {
-        name:"Ganesh",
-        age : 45,
-        sex: 'M', //convert to 0 or 1
-        chestPain : 2,
-        id : 3,
-        inRisk : true
-      }
-    ]
+    created:async function(){
+    const res = await axios.get('http://localhost:5000/patient')
+    console.log(res)
+    this.$store.dispatch("setPatientsData" , res.data.data);
+    this.mounted = true
+    },
 
-    this.$store.dispatch("setPatientsData" , data);
+    data(){
+      return{
+        mounted : false
+      }
     }
+    
   }
 </script>
 <style>

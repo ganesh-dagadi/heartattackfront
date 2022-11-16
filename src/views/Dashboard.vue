@@ -26,8 +26,26 @@
 
 <script>
 // @ is an alias to /src
+import { mapGetters } from 'vuex';
 
 export default {
+ 
+  computed : mapGetters(['getPatientData']),
+  mounted: function(){
+    let patients = this.getPatientData
+    let safePatients = []
+    let RiskPatient = []
+    patients.forEach(patient=>{
+      if(patient.inRisk){
+        RiskPatient.push(patient)
+      }else{
+        safePatients.push(patient)
+      }
+    })
+    
+    this.numPatients = patients.length
+    this.NumInRisk = RiskPatient.length
+  },
   name: 'HomeView',
   data() {
     return{
@@ -36,6 +54,10 @@ export default {
     }
   }
 }
+
+
+
+
 </script>
 
 
